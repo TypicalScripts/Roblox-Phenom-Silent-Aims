@@ -1,3 +1,25 @@
+-updated by buddy_yt
+local UIS = game:GetService('UserInputService')
+local plr = game.Players.LocalPlayer
+local Char = plr.Character or plr.CharacterAded:Wait()
+local Key = 'R'
+UIS.InputBegan:Connect(function(Input, IsTyping)
+if IsTyping then return end
+local KeyPressed = Input.KeyCode
+if KeyPressed == Enum.KeyCode[Key] then
+game.Workspace.Map.Basketball.Handle.CFrame = Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end)
+
+-- Rooftop long arm ASS
+local plr = game:GetService("Players").LocalPlayer
+local chr = plr.Character
+local Right = chr["Right Arm"]
+local Left = chr["Left Arm"]
+
+Left.Size = Vector3.new(19, Left.Size.Y, Left.Size.Z)
+Right.Size = Vector3.new(19, Right.Size.Y, Right.Size.Z)
+
 local S, E = pcall(function()
     _G.Stepped:Disconnect()
     _G.InputBegan:Disconnect()
