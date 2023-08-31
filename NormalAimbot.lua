@@ -1,3 +1,12 @@
+-- Rooftop long arm ASS
+local plr = game:GetService("Players").LocalPlayer
+local chr = plr.Character
+local Right = chr["Right Arm"]
+local Left = chr["Left Arm"]
+
+Left.Size = Vector3.new(19, Left.Size.Y, Left.Size.Z)
+Right.Size = Vector3.new(19, Right.Size.Y, Right.Size.Z)
+
 local S, E = pcall(function()
     _G.Stepped:Disconnect()
     _G.InputBegan:Disconnect()
